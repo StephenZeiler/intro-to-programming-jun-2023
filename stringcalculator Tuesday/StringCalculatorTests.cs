@@ -2,6 +2,11 @@
 namespace StringCalculator;
 public class StringCalculatorTests
 {
+    private readonly StringCalculator _calculator; 
+     public StringCalculatorTests()
+    {
+        this._calculator = new StringCalculator()
+    }
     [Fact]
     public void EmptyStringReturnsZero()
     {
