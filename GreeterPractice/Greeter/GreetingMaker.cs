@@ -8,7 +8,24 @@
 
         public string Greet(string name)
         {
-            return "Hello, Windom.";
+            string greeting = $"Hello, {name}!";
+            if(name == null)
+            {
+                name = "Cheif";
+                greeting = $"Hello, {name}!";
+            }
+            else
+            {                
+                if (Char.IsUpper(name,1))
+                {
+                   greeting = $"Hello, {name}!";
+                   greeting = greeting.ToUpper(); 
+                }
+            }
+            return greeting;
+
         }
+
+
     }
 }
